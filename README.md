@@ -9,11 +9,32 @@ In this project, you'll apply Object-Oriented Programming (OOP) principles, Test
 ```mermaid
 classDiagram
   Deck *-- "0..52" Card
+  Hand *-- "2..5" Card
+  Player o-- "1" Hand
+  Game o-- "2..*" Player
   class Card {
     -string suit
     -string value
   }
   class Deck {
-    -Card[] cards
+    -Card[52] cards
+    +shuffle!()
+    +deal()
+  }
+  class Hand {
+    -Card[5] cards
+    +beats(hand: Hand) bool
+    -strength()
+  }
+  class Player {
+    -Hand hand
+    -int pot
+  }
+  class Game {
+    -Deck deck
+    -Player[] players
+    -int turn
+    -int pot
+    -int bet
   }
 ```
