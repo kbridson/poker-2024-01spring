@@ -38,3 +38,11 @@ classDiagram
     -int bet
   }
 ```
+
+## Game Process
+
+1. Initialize the deck
+2. Shuffle the deck
+3. Register players
+4. Ante - default 10
+5. Deal initial cards to each player
