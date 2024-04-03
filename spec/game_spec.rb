@@ -7,9 +7,12 @@ RSpec.describe Game do
     it 'plays a 2 player game with raise then see, no folds, no discards' do
       game = Game.new
 
-      p1 = double 'p1', hand: '10♠, J♦, Q♠, K♠, A♠'
-      p2 = double 'p2', hand: '2♣, 3♣, 9♦, J♣, K♦'
+      p1 = double 'p1', hand: '10♠, J♦, Q♠, K♠, A♠', pot: 500
+      p2 = double 'p2', hand: '2♣, 3♣, 9♦, J♣, K♦', pot: 500
       game.players = [p1, p2]
+
+      allow(Hand).to receive(:strength).with('10♠, J♦, Q♠, K♠, A♠').and_return('Royal Flush')
+      allow(Hand).to receive(:strength).with('2♣, 3♣, 9♦, J♣, K♦').and_return('High Card')
 
       $stdout = StringIO.new
       inputs = ['raise 10', 'call', 'none', 'none', 'raise 50', 'call']
@@ -22,8 +25,6 @@ RSpec.describe Game do
         input # This will be the return value of $stdin.gets call
       end
 
-      allow(double('p1_hand')).to receive(:to_s).and_return('9♠, 10♠, J♦, Q♠, K♠')
-
       game.play
 
       expect($stdout.string.chomp).to eq(File.read('spec/fixtures/run0.txt'))
@@ -33,9 +34,12 @@ RSpec.describe Game do
     it 'plays a different 2 player game with raise then see, no folds, no discards' do
       game = Game.new
 
-      p1 = double 'p1', hand: '9♠, 10♠, J♦, Q♠, K♠'
-      p2 = double 'p2', hand: '2♣, 4♣, 9♦, J♣, K♦'
+      p1 = double 'p1', hand: '9♠, 10♠, J♦, Q♠, K♠', pot: 100
+      p2 = double 'p2', hand: '2♣, 4♣, 9♦, J♣, K♦', pot: 100
       game.players = [p1, p2]
+
+      allow(Hand).to receive(:strength).with('9♠, 10♠, J♦, Q♠, K♠').and_return('Flush')
+      allow(Hand).to receive(:strength).with('2♣, 4♣, 9♦, J♣, K♦').and_return('High Card')
 
       $stdout = StringIO.new
       inputs = ['raise 10', 'call', 'none', 'none', 'raise 50', 'call']

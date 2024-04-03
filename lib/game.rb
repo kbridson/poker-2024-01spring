@@ -16,13 +16,13 @@ class Game
     puts "Player 2's hand: #{players[1].hand}"
     puts
 
-    puts "Player 1's pot: $500"
-    puts "Player 2's pot: $500"
+    puts "Player 1's pot: $#{players[0].pot}"
+    puts "Player 2's pot: $#{players[0].pot}"
     puts 'Current main pot: $0'
     puts
 
     puts 'Betting round:'
-    puts 'Player 1, your pot: $500'
+    puts "Player 1, your pot: $#{players[0].pot}"
     puts 'Current main pot: $0'
     puts 'Current bet: $0'
     print 'Enter your bet (fold, call, or raise): '
@@ -31,7 +31,7 @@ class Game
     puts 'Your pot is now $490'
     puts
 
-    puts 'Player 2, your pot: $500'
+    puts "Player 2, your pot: $#{players[0].pot}"
     puts 'Current main pot: $10'
     puts 'Current bet: $10'
     print 'Enter your bet (fold, call, or raise): '
@@ -72,16 +72,20 @@ class Game
     puts
 
     puts 'Final hands:'
-    puts "Player 1: #{players[0].hand} (Royal Flush)"
-    puts "Player 2: #{players[1].hand} (High Card)"
+    puts "Player 1: #{players[0].hand} (#{Hand.strength(players[0].hand)})"
+    puts "Player 2: #{players[1].hand} (#{Hand.strength(players[1].hand)})"
     puts
 
-    puts 'Winner is Player 1 with a Royal Flush!'
+    puts "Winner is Player 1 with a #{Hand.strength(players[0].hand)}!"
     puts 'Player 1 wins $120'
     puts
 
     puts "Game over. Player 1's pot: $560, Player 2's pot: $440"
   end
+end
+
+class Hand
+  def self.strength(hand); end
 end
 
 # Game.new.play
