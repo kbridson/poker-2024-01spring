@@ -8,9 +8,15 @@ class Game
     @pot = 0
   end
 
-  def do(player, _action)
-    player.pot -= current_bet
-    @pot += current_bet
+  def do(player, action)
+    case action
+    when 'call'
+      player.pot -= current_bet
+      @pot += current_bet
+    when 'raise 5'
+      player.pot -= 5
+      @pot += 5
+    end
   end
 
   def play
