@@ -11,16 +11,17 @@ RSpec.describe Game do
       p1.pot = 500
       p2 = Player.new
       p2.pot = 500
-      allow(p1).to receive(:hand).and_return '10♠, J♦, Q♠, K♠, A♠'
-      allow(p2).to receive(:hand).and_return '2♣, 3♣, 9♦, J♣, K♦'
+      hand1 = '10♠, J♦, Q♠, K♠, A♠'
+      hand2 = '2♣, 3♣, 9♦, J♣, K♦'
+      allow(p1).to receive(:hand).and_return hand1
+      allow(p2).to receive(:hand).and_return hand2
       game.players = [p1, p2]
 
-      allow(Hand).to receive(:strength).with('10♠, J♦, Q♠, K♠, A♠').and_return('Royal Flush')
-      allow(Hand).to receive(:strength).with('2♣, 3♣, 9♦, J♣, K♦').and_return('High Card')
+      allow(Hand).to receive(:strength).with(hand1).and_return('Royal Flush')
+      allow(Hand).to receive(:strength).with(hand2).and_return('High Card')
 
       $stdout = StringIO.new
       inputs = ['raise 10', 'call', 'none', 'none', 'raise 50', 'call']
-      # allow($stdin).to receive(:gets).and_return(*inputs)
       input_enum = inputs.to_enum
 
       allow($stdin).to receive(:gets) do
@@ -42,22 +43,23 @@ RSpec.describe Game do
       p1.pot = 100
       p2 = Player.new
       p2.pot = 100
-      allow(p1).to receive(:hand).and_return '9♠, 10♠, J♦, Q♠, K♠'
-      allow(p2).to receive(:hand).and_return '2♣, 4♣, 9♦, J♣, K♦'
+      hand1 = '9♠, 10♠, J♦, Q♠, K♠'
+      hand2 = '2♣, 4♣, 9♦, J♣, K♦'
+      allow(p1).to receive(:hand).and_return hand1
+      allow(p2).to receive(:hand).and_return hand2
       game.players = [p1, p2]
 
-      allow(Hand).to receive(:strength).with('9♠, 10♠, J♦, Q♠, K♠').and_return('Flush')
-      allow(Hand).to receive(:strength).with('2♣, 4♣, 9♦, J♣, K♦').and_return('High Card')
+      allow(Hand).to receive(:strength).with(hand1).and_return('Flush')
+      allow(Hand).to receive(:strength).with(hand2).and_return('High Card')
 
       $stdout = StringIO.new
       inputs = ['raise 10', 'call', 'none', 'none', 'raise 50', 'call']
-      # allow($stdin).to receive(:gets).and_return(*inputs)
       input_enum = inputs.to_enum
 
       allow($stdin).to receive(:gets) do
         input = input_enum.next
-        $stdout.print("#{input}\n") # This will write the input to your captured $stdout
-        input  # This will be the return value of $stdin.gets call
+        $stdout.print("#{input}\n")
+        input
       end
 
       game.play
