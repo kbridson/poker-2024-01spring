@@ -2,10 +2,15 @@
 # typed: true
 
 class Game
-  attr_accessor :players, :current_bet
+  attr_accessor :players, :current_bet, :pot
+
+  def initialize
+    @pot = 0
+  end
 
   def do(player, _action)
     player.pot -= current_bet
+    @pot += current_bet
   end
 
   def play

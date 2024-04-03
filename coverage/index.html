@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-03T04:28:52-05:00">2024-04-03T04:28:52-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-03T04:34:00-05:00">2024-04-03T04:34:00-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  86.9%
+  87.57%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.48
+         1.5
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>168</b> relevant lines,
-    <span class="green"><b>146</b> lines covered</span> and
+    <b>177</b> relevant lines,
+    <span class="green"><b>155</b> lines covered</span> and
     <span class="red"><b>22</b> lines missed. </span>
     (<span class="yellow">
-  86.9%
+  87.57%
 </span>
 )
   </div>
@@ -73,22 +73,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#35fe68d5083bd4b68b51abc34225169c1334612e" class="src_link" title="lib/game.rb">lib/game.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">106</td>
-            <td class="cell--number">79</td>
-            <td class="cell--number">79</td>
+            <td class="cell--number">111</td>
+            <td class="cell--number">82</td>
+            <td class="cell--number">82</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.89</td>
+            <td class="cell--number">1.94</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3b74ee9539ad57ce86bfc75b62a87e49e5342f6e" class="src_link" title="spec/game_spec.rb">spec/game_spec.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">75.28 %</td>
-            <td class="cell--number">131</td>
-            <td class="cell--number">89</td>
-            <td class="cell--number">67</td>
+            <td class="red strong cell--number t-file__coverage">76.84 %</td>
+            <td class="cell--number">140</td>
+            <td class="cell--number">95</td>
+            <td class="cell--number">73</td>
             <td class="cell--number">22</td>
-            <td class="cell--number">1.11</td>
+            <td class="cell--number">1.12</td>
             
           </tr>
         
@@ -123,8 +123,8 @@
     
 
     <div class="t-line-summary">
-      <b>79</b> relevant lines.
-      <span class="green"><b>79</b> lines covered</span> and
+      <b>82</b> relevant lines.
+      <span class="green"><b>82</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby">  attr_accessor :players, :current_bet</code>
+            <code class="ruby">  attr_accessor :players, :current_bet, :pot</code>
           </li>
         </div>
       
@@ -208,18 +208,18 @@
 
             
 
-            <code class="ruby">  def do(player, _action)</code>
+            <code class="ruby">  def initialize</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="5" data-linenumber="8">
+            <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">    player.pot -= current_bet</code>
+            <code class="ruby">    @pot = 0</code>
           </li>
         </div>
       
@@ -252,29 +252,29 @@
 
             
 
-            <code class="ruby">  def play</code>
+            <code class="ruby">  def do(player, _action)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="12">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="12">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    puts &#39;Starting 5 Card Draw Poker Game...&#39;</code>
+            <code class="ruby">    player.pot -= current_bet</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="13">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">    puts</code>
+            <code class="ruby">    @pot += current_bet</code>
           </li>
         </div>
       
@@ -285,40 +285,40 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="15">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    puts &#39;Shuffling deck...&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="16">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    puts</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def play</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="17">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &#39;Starting 5 Card Draw Poker Game...&#39;</code>
           </li>
         </div>
       
@@ -329,18 +329,18 @@
 
             
 
-            <code class="ruby">    puts &#39;Dealing cards to players...&#39;</code>
+            <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="19">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="19">
+            
             
 
             
 
-            <code class="ruby">    puts &quot;Player 1&#39;s hand: #{players[0].hand}&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -351,7 +351,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 2&#39;s hand: #{players[1].hand}&quot;</code>
+            <code class="ruby">    puts &#39;Shuffling deck...&#39;</code>
           </li>
         </div>
       
@@ -384,7 +384,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 1&#39;s pot: $#{players[0].pot}&quot;</code>
+            <code class="ruby">    puts &#39;Dealing cards to players...&#39;</code>
           </li>
         </div>
       
@@ -395,7 +395,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 2&#39;s pot: $#{players[1].pot}&quot;</code>
+            <code class="ruby">    puts &quot;Player 1&#39;s hand: #{players[0].hand}&quot;</code>
           </li>
         </div>
       
@@ -406,7 +406,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Current main pot: $0&#39;</code>
+            <code class="ruby">    puts &quot;Player 2&#39;s hand: #{players[1].hand}&quot;</code>
           </li>
         </div>
       
@@ -439,7 +439,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Betting round:&#39;</code>
+            <code class="ruby">    puts &quot;Player 1&#39;s pot: $#{players[0].pot}&quot;</code>
           </li>
         </div>
       
@@ -450,7 +450,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 1, your pot: $#{players[0].pot}&quot;</code>
+            <code class="ruby">    puts &quot;Player 2&#39;s pot: $#{players[1].pot}&quot;</code>
           </li>
         </div>
       
@@ -472,18 +472,18 @@
 
             
 
-            <code class="ruby">    puts &#39;Current bet: $0&#39;</code>
+            <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="32">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -494,7 +494,7 @@
 
             
 
-            <code class="ruby">    STDIN.gets</code>
+            <code class="ruby">    puts &#39;Betting round:&#39;</code>
           </li>
         </div>
       
@@ -505,7 +505,7 @@
 
             
 
-            <code class="ruby">    players[0].pot -= 10</code>
+            <code class="ruby">    puts &quot;Player 1, your pot: $#{players[0].pot}&quot;</code>
           </li>
         </div>
       
@@ -516,7 +516,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Main pot is now $10&#39;</code>
+            <code class="ruby">    puts &#39;Current main pot: $0&#39;</code>
           </li>
         </div>
       
@@ -527,7 +527,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Your pot is now $#{players[0].pot}&quot;</code>
+            <code class="ruby">    puts &#39;Current bet: $0&#39;</code>
           </li>
         </div>
       
@@ -538,18 +538,18 @@
 
             
 
-            <code class="ruby">    puts</code>
+            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="38">
+            <span class="hits">2</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    STDIN.gets</code>
           </li>
         </div>
       
@@ -560,7 +560,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 2, your pot: $#{players[1].pot}&quot;</code>
+            <code class="ruby">    players[0].pot -= 10</code>
           </li>
         </div>
       
@@ -571,7 +571,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Current main pot: $10&#39;</code>
+            <code class="ruby">    puts &#39;Main pot is now $10&#39;</code>
           </li>
         </div>
       
@@ -582,7 +582,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Current bet: $10&#39;</code>
+            <code class="ruby">    puts &quot;Your pot is now $#{players[0].pot}&quot;</code>
           </li>
         </div>
       
@@ -593,18 +593,18 @@
 
             
 
-            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
+            <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="43">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="43">
+            
             
 
             
 
-            <code class="ruby">    STDIN.gets</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -615,7 +615,7 @@
 
             
 
-            <code class="ruby">    players[1].pot -= 10</code>
+            <code class="ruby">    puts &quot;Player 2, your pot: $#{players[1].pot}&quot;</code>
           </li>
         </div>
       
@@ -626,7 +626,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Main pot is now $20&#39;</code>
+            <code class="ruby">    puts &#39;Current main pot: $10&#39;</code>
           </li>
         </div>
       
@@ -637,7 +637,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Your pot is now $#{players[1].pot}&quot;</code>
+            <code class="ruby">    puts &#39;Current bet: $10&#39;</code>
           </li>
         </div>
       
@@ -648,18 +648,18 @@
 
             
 
-            <code class="ruby">    puts</code>
+            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="48">
+            <span class="hits">2</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    STDIN.gets</code>
           </li>
         </div>
       
@@ -670,7 +670,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 1&#39;s turn:&quot;</code>
+            <code class="ruby">    players[1].pot -= 10</code>
           </li>
         </div>
       
@@ -681,7 +681,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Your hand: #{players[0].hand}&quot;</code>
+            <code class="ruby">    puts &#39;Main pot is now $20&#39;</code>
           </li>
         </div>
       
@@ -692,7 +692,7 @@
 
             
 
-            <code class="ruby">    print &quot;Choose cards to discard (enter positions separated by spaces, or &#39;none&#39; to keep all): &quot;</code>
+            <code class="ruby">    puts &quot;Your pot is now $#{players[1].pot}&quot;</code>
           </li>
         </div>
       
@@ -703,29 +703,29 @@
 
             
 
-            <code class="ruby">    STDIN.gets</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="53">
-            <span class="hits">2</span>
-            
-
-            
-
             <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="54">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &quot;Player 1&#39;s turn:&quot;</code>
           </li>
         </div>
       
@@ -736,7 +736,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 2&#39;s turn:&quot;</code>
+            <code class="ruby">    puts &quot;Your hand: #{players[0].hand}&quot;</code>
           </li>
         </div>
       
@@ -747,7 +747,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Your hand: #{players[1].hand}&quot;</code>
+            <code class="ruby">    print &quot;Choose cards to discard (enter positions separated by spaces, or &#39;none&#39; to keep all): &quot;</code>
           </li>
         </div>
       
@@ -758,7 +758,7 @@
 
             
 
-            <code class="ruby">    print &quot;Choose cards to discard (enter positions separated by spaces, or &#39;none&#39; to keep all): &quot;</code>
+            <code class="ruby">    STDIN.gets</code>
           </li>
         </div>
       
@@ -769,29 +769,29 @@
 
             
 
-            <code class="ruby">    STDIN.gets</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="59">
-            <span class="hits">2</span>
-            
-
-            
-
             <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="60">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &quot;Player 2&#39;s turn:&quot;</code>
           </li>
         </div>
       
@@ -802,7 +802,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Betting round:&#39;</code>
+            <code class="ruby">    puts &quot;Your hand: #{players[1].hand}&quot;</code>
           </li>
         </div>
       
@@ -813,7 +813,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 1, your pot: $#{players[0].pot}&quot;</code>
+            <code class="ruby">    print &quot;Choose cards to discard (enter positions separated by spaces, or &#39;none&#39; to keep all): &quot;</code>
           </li>
         </div>
       
@@ -824,7 +824,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Current main pot: $20&#39;</code>
+            <code class="ruby">    STDIN.gets</code>
           </li>
         </div>
       
@@ -835,18 +835,18 @@
 
             
 
-            <code class="ruby">    puts &#39;Current bet: $0&#39;</code>
+            <code class="ruby">    puts</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="65">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="65">
+            
             
 
             
 
-            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -857,7 +857,7 @@
 
             
 
-            <code class="ruby">    STDIN.gets</code>
+            <code class="ruby">    puts &#39;Betting round:&#39;</code>
           </li>
         </div>
       
@@ -868,7 +868,7 @@
 
             
 
-            <code class="ruby">    players[0].pot -= 50</code>
+            <code class="ruby">    puts &quot;Player 1, your pot: $#{players[0].pot}&quot;</code>
           </li>
         </div>
       
@@ -879,7 +879,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Main pot is now $70&#39;</code>
+            <code class="ruby">    puts &#39;Current main pot: $20&#39;</code>
           </li>
         </div>
       
@@ -890,7 +890,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Your pot is now $#{players[0].pot}&quot;</code>
+            <code class="ruby">    puts &#39;Current bet: $0&#39;</code>
           </li>
         </div>
       
@@ -901,67 +901,12 @@
 
             
 
-            <code class="ruby">    puts</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="71">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="72">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    puts &quot;Player 2, your pot: $#{players[1].pot}&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="73">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    puts &#39;Current main pot: $70&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="74">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    puts &#39;Current bet: $50&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="75">
-            <span class="hits">2</span>
-            
-
-            
-
             <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="76">
+          <li class="covered" data-hits="2" data-linenumber="71">
             <span class="hits">2</span>
             
 
@@ -972,40 +917,40 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="77">
+          <li class="covered" data-hits="2" data-linenumber="72">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    players[1].pot -= 50</code>
+            <code class="ruby">    players[0].pot -= 50</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="78">
+          <li class="covered" data-hits="2" data-linenumber="73">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    puts &#39;Main pot is now $120&#39;</code>
+            <code class="ruby">    puts &#39;Main pot is now $70&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="79">
+          <li class="covered" data-hits="2" data-linenumber="74">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    puts &quot;Your pot is now $#{players[1].pot}&quot;</code>
+            <code class="ruby">    puts &quot;Your pot is now $#{players[0].pot}&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="80">
+          <li class="covered" data-hits="2" data-linenumber="75">
             <span class="hits">2</span>
             
 
@@ -1016,7 +961,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="81">
+          <li class="never" data-hits="" data-linenumber="76">
             
             
 
@@ -1027,13 +972,68 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="2" data-linenumber="77">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &quot;Player 2, your pot: $#{players[1].pot}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="78">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &#39;Current main pot: $70&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="79">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts &#39;Current bet: $50&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="80">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    print &#39;Enter your bet (fold, call, or raise): &#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="81">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    STDIN.gets</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="2" data-linenumber="82">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    puts &#39;Final hands:&#39;</code>
+            <code class="ruby">    players[1].pot -= 50</code>
           </li>
         </div>
       
@@ -1044,7 +1044,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 1: #{players[0].hand} (#{Hand.strength(players[0].hand)})&quot;</code>
+            <code class="ruby">    puts &#39;Main pot is now $120&#39;</code>
           </li>
         </div>
       
@@ -1055,7 +1055,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Player 2: #{players[1].hand} (#{Hand.strength(players[1].hand)})&quot;</code>
+            <code class="ruby">    puts &quot;Your pot is now $#{players[1].pot}&quot;</code>
           </li>
         </div>
       
@@ -1088,7 +1088,7 @@
 
             
 
-            <code class="ruby">    puts &quot;Winner is Player 1 with a #{Hand.strength(players[0].hand)}!&quot;</code>
+            <code class="ruby">    puts &#39;Final hands:&#39;</code>
           </li>
         </div>
       
@@ -1099,7 +1099,7 @@
 
             
 
-            <code class="ruby">    players[0].pot += 120</code>
+            <code class="ruby">    puts &quot;Player 1: #{players[0].hand} (#{Hand.strength(players[0].hand)})&quot;</code>
           </li>
         </div>
       
@@ -1110,7 +1110,7 @@
 
             
 
-            <code class="ruby">    puts &#39;Player 1 wins $120&#39;</code>
+            <code class="ruby">    puts &quot;Player 2: #{players[1].hand} (#{Hand.strength(players[1].hand)})&quot;</code>
           </li>
         </div>
       
@@ -1143,34 +1143,45 @@
 
             
 
-            <code class="ruby">    puts &quot;Game over. Player 1&#39;s pot: $#{players[0].pot}, Player 2&#39;s pot: $#{players[1].pot}&quot;</code>
+            <code class="ruby">    puts &quot;Winner is Player 1 with a #{Hand.strength(players[0].hand)}!&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="93">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="93">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    players[0].pot += 120</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="94">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="94">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">end</code>
+            
+
+            <code class="ruby">    puts &#39;Player 1 wins $120&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="95">
+          <li class="covered" data-hits="2" data-linenumber="95">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    puts</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="96">
             
             
 
@@ -1181,24 +1192,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="97">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">class Hand</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="97">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.strength(hand); end</code>
+            <code class="ruby">    puts &quot;Game over. Player 1&#39;s pot: $#{players[0].pot}, Player 2&#39;s pot: $#{players[1].pot}&quot;</code>
           </li>
         </div>
       
@@ -1209,7 +1209,7 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1220,18 +1220,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="100">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="100">
+            
             
 
             
 
-            <code class="ruby">class Player</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1242,34 +1242,23 @@
 
             
 
-            <code class="ruby">  attr_accessor :pot</code>
+            <code class="ruby">class Hand</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="102">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="103">
+          <li class="covered" data-hits="1" data-linenumber="102">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def hand; end</code>
+            <code class="ruby">  def self.strength(hand); end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="104">
+          <li class="never" data-hits="" data-linenumber="103">
             
             
 
@@ -1280,7 +1269,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="105">
+          <li class="never" data-hits="" data-linenumber="104">
             
             
 
@@ -1291,7 +1280,73 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="106">
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Player</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="106">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attr_accessor :pot</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="108">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def hand; end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="109">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="110">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="111">
             
             
 
@@ -1311,7 +1366,7 @@
     <h3>spec/game_spec.rb</h3>
     <h4>
       <span class="red">
-  75.28%
+  76.84%
 </span>
 
       lines covered
@@ -1320,8 +1375,8 @@
     
 
     <div class="t-line-summary">
-      <b>89</b> relevant lines.
-      <span class="green"><b>67</b> lines covered</span> and
+      <b>95</b> relevant lines.
+      <span class="green"><b>73</b> lines covered</span> and
       <span class="red"><b>22</b> lines missed.</span>
     </div>
 
@@ -2736,12 +2791,111 @@
 
             
 
-            <code class="ruby">      it &#39;should change game pot by current bet&#39;</code>
+            <code class="ruby">      it &#39;should change game pot by current bet&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="129">
+          <li class="covered" data-hits="1" data-linenumber="129">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        game = Game.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="130">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        game.current_bet = 10</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="131">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="132">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        p1 = Player.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="133">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        p1.pot = 100</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="134">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        action = &#39;call&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="135">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="136">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">        expect { game.do(p1, action) }.to change(game, :pot).from(0).to(10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="137">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="138">
             
             
 
@@ -2752,7 +2906,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="130">
+          <li class="never" data-hits="" data-linenumber="139">
             
             
 
@@ -2763,7 +2917,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="131">
+          <li class="never" data-hits="" data-linenumber="140">
             
             
 
