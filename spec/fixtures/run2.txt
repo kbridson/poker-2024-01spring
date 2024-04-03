@@ -19,7 +19,7 @@ Main pot is now $5
 Your pot is now $95
 
 Player 2, your pot: $100
-Current main pot: $10
+Current main pot: $5
 Current bet: $5
 Enter your bet (fold, call, or raise): call
 Main pot is now $10

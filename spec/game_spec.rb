@@ -68,7 +68,7 @@ RSpec.describe Game do
       expect($stdin).to have_received(:gets).exactly(6).times
     end
 
-    xit 'plays a 2 player game (run2) with raise then see, no folds, no discards' do
+    it 'plays a 2 player game (run2) with raise then see, no folds, no discards' do
       game = Game.new
 
       p1 = Player.new
