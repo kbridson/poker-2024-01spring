@@ -9,13 +9,15 @@ class Game
   end
 
   def do(player, action)
-    case action
+    instr, val = action.split
+    case instr
     when 'call'
       player.pot -= current_bet
       @pot += current_bet
-    when 'raise 5'
-      player.pot -= 5
-      @pot += 5
+    when 'raise'
+      amt = current_bet + val.to_i
+      player.pot -= amt
+      @pot += amt
     end
   end
 

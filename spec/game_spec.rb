@@ -148,6 +148,17 @@ RSpec.describe Game do
 
         expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(95).and change(game, :pot).from(0).to(5)
       end
+
+      it 'should change player pot and game pot by current bet (5) + raise amt (5) = 10' do
+        game = Game.new
+        game.current_bet = 5
+
+        p1 = Player.new
+        p1.pot = 100
+        action = 'raise 5'
+
+        expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(90).and change(game, :pot).from(0).to(10)
+      end
     end
   end
 end
