@@ -2,6 +2,8 @@
 # typed: true
 
 class Game
+  attr_accessor :players
+
   def play
     puts 'Starting 5 Card Draw Poker Game...'
     puts
@@ -10,8 +12,8 @@ class Game
     puts
 
     puts 'Dealing cards to players...'
-    puts "Player 1's hand: 10♠, J♦, Q♠, K♠, A♠"
-    puts "Player 2's hand: 2♣, 3♣, 9♦, J♣, K♦"
+    puts "Player 1's hand: #{players[0].hand}"
+    puts "Player 2's hand: #{players[1].hand}"
     puts
 
     puts "Player 1's pot: $500"
@@ -39,13 +41,13 @@ class Game
     puts
 
     puts "Player 1's turn:"
-    puts 'Your hand: 10♠, J♦, Q♠, K♠, A♠'
+    puts "Your hand: #{players[0].hand}"
     print "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): "
     STDIN.gets
     puts
 
     puts "Player 2's turn:"
-    puts 'Your hand: 2♣, 3♣, 9♦, J♣, K♦'
+    puts "Your hand: #{players[1].hand}"
     print "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): "
     STDIN.gets
     puts
@@ -70,8 +72,8 @@ class Game
     puts
 
     puts 'Final hands:'
-    puts 'Player 1: 10♠, J♦, Q♠, K♠, A♠ (Royal Flush)'
-    puts 'Player 2: 2♣, 3♣, 9♦, J♣, K♦ (High Card)'
+    puts "Player 1: #{players[0].hand} (Royal Flush)"
+    puts "Player 2: #{players[1].hand} (High Card)"
     puts
 
     puts 'Winner is Player 1 with a Royal Flush!'
