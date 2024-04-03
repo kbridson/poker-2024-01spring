@@ -7,8 +7,12 @@ RSpec.describe Game do
     it 'plays a 2 player game with raise then see, no folds, no discards' do
       game = Game.new
 
-      p1 = double 'p1', hand: '10♠, J♦, Q♠, K♠, A♠', pot: 500
-      p2 = double 'p2', hand: '2♣, 3♣, 9♦, J♣, K♦', pot: 500
+      p1 = Player.new
+      p1.pot = 500
+      p2 = Player.new
+      p2.pot = 500
+      allow(p1).to receive(:hand).and_return '10♠, J♦, Q♠, K♠, A♠'
+      allow(p2).to receive(:hand).and_return '2♣, 3♣, 9♦, J♣, K♦'
       game.players = [p1, p2]
 
       allow(Hand).to receive(:strength).with('10♠, J♦, Q♠, K♠, A♠').and_return('Royal Flush')
@@ -34,8 +38,12 @@ RSpec.describe Game do
     it 'plays a different 2 player game with raise then see, no folds, no discards' do
       game = Game.new
 
-      p1 = double 'p1', hand: '9♠, 10♠, J♦, Q♠, K♠', pot: 100
-      p2 = double 'p2', hand: '2♣, 4♣, 9♦, J♣, K♦', pot: 100
+      p1 = Player.new
+      p1.pot = 100
+      p2 = Player.new
+      p2.pot = 100
+      allow(p1).to receive(:hand).and_return '9♠, 10♠, J♦, Q♠, K♠'
+      allow(p2).to receive(:hand).and_return '2♣, 4♣, 9♦, J♣, K♦'
       game.players = [p1, p2]
 
       allow(Hand).to receive(:strength).with('9♠, 10♠, J♦, Q♠, K♠').and_return('Flush')
