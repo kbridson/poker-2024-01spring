@@ -4,6 +4,10 @@
 class Game
   attr_accessor :players
 
+  def do(player, _action)
+    player.pot -= 10
+  end
+
   def play
     puts 'Starting 5 Card Draw Poker Game...'
     puts

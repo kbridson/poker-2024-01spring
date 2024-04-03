@@ -100,4 +100,18 @@ RSpec.describe Game do
       expect($stdin).to have_received(:gets).exactly(6).times
     end
   end
+
+  describe '#do' do
+    context 'when call' do
+      it 'should change player pot by current bet when bet is 10' do
+        game = Game.new
+
+        p1 = Player.new
+        p1.pot = 100
+        action = 'call'
+
+        expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(90)
+      end
+    end
+  end
 end
