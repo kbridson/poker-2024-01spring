@@ -3,13 +3,24 @@
     "coverage": {
       "/Users/kbrid/workspace-3081/poker/spec/game_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
-          0,
+          1,
+          null
+        ]
+      },
+      "/Users/kbrid/workspace-3081/poker/lib/game.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
           null
         ]
       }
     },
-    "timestamp": 1710986167
+    "timestamp": 1712117610
   }
 }
