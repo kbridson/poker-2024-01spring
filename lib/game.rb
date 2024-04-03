@@ -23,7 +23,8 @@ class Game
     puts 'Player 1, your pot: $500'
     puts 'Current main pot: $0'
     puts 'Current bet: $0'
-    puts 'Enter your bet (fold, call, or raise): raise 10'
+    print 'Enter your bet (fold, call, or raise): '
+    STDIN.gets
     puts 'Main pot is now $10'
     puts 'Your pot is now $490'
     puts
@@ -31,26 +32,30 @@ class Game
     puts 'Player 2, your pot: $500'
     puts 'Current main pot: $10'
     puts 'Current bet: $10'
-    puts 'Enter your bet (fold, call, or raise): call'
+    print 'Enter your bet (fold, call, or raise): '
+    STDIN.gets
     puts 'Main pot is now $20'
     puts 'Your pot is now $490'
     puts
 
     puts "Player 1's turn:"
     puts 'Your hand: 10♠, J♦, Q♠, K♠, A♠'
-    puts "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): none"
+    print "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): "
+    STDIN.gets
     puts
 
     puts "Player 2's turn:"
     puts 'Your hand: 2♣, 3♣, 9♦, J♣, K♦'
-    puts "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): none"
+    print "Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): "
+    STDIN.gets
     puts
 
     puts 'Betting round:'
     puts 'Player 1, your pot: $490'
     puts 'Current main pot: $20'
     puts 'Current bet: $0'
-    puts 'Enter your bet (fold, call, or raise): raise 50'
+    print 'Enter your bet (fold, call, or raise): '
+    STDIN.gets
     puts 'Main pot is now $70'
     puts 'Your pot is now $440'
     puts
@@ -58,7 +63,8 @@ class Game
     puts 'Player 2, your pot: $490'
     puts 'Current main pot: $70'
     puts 'Current bet: $50'
-    puts 'Enter your bet (fold, call, or raise): call'
+    print 'Enter your bet (fold, call, or raise): '
+    STDIN.gets
     puts 'Main pot is now $120'
     puts 'Your pot is now $440'
     puts
@@ -75,3 +81,5 @@ class Game
     puts "Game over. Player 1's pot: $560, Player 2's pot: $440"
   end
 end
+
+# Game.new.play
