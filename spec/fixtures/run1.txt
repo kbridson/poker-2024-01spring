@@ -1,0 +1,58 @@
+Starting 5 Card Draw Poker Game...
+
+Shuffling deck...
+
+Dealing cards to players...
+Player 1's hand: 9♠, 10♠, J♦, Q♠, K♠
+Player 2's hand: 2♣, 4♣, 9♦, J♣, K♦
+
+Player 1's pot: $100
+Player 2's pot: $100
+Current main pot: $0
+
+Betting round:
+Player 1, your pot: $100
+Current main pot: $0
+Current bet: $0
+Enter your bet (fold, call, or raise): raise 10
+Main pot is now $10
+Your pot is now $90
+
+Player 2, your pot: $100
+Current main pot: $10
+Current bet: $10
+Enter your bet (fold, call, or raise): call
+Main pot is now $20
+Your pot is now $90
+
+Player 1's turn:
+Your hand: 9♠, 10♠, J♦, Q♠, K♠
+Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): none
+
+Player 2's turn:
+Your hand: 2♣, 4♣, 9♦, J♣, K♦
+Choose cards to discard (enter positions separated by spaces, or 'none' to keep all): none
+
+Betting round:
+Player 1, your pot: $90
+Current main pot: $20
+Current bet: $0
+Enter your bet (fold, call, or raise): raise 50
+Main pot is now $70
+Your pot is now $40
+
+Player 2, your pot: $90
+Current main pot: $70
+Current bet: $50
+Enter your bet (fold, call, or raise): call
+Main pot is now $120
+Your pot is now $40
+
+Final hands:
+Player 1: 9♠, 10♠, J♦, Q♠, K♠ (Flush)
+Player 2: 2♣, 4♣, 9♦, J♣, K♦ (High Card)
+
+Winner is Player 1 with a Flush!
+Player 1 wins $120
+
+Game over. Player 1's pot: $160, Player 2's pot: $40
