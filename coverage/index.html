@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-03T04:24:02-05:00">2024-04-03T04:24:02-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-03T04:27:27-05:00">2024-04-03T04:27:27-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  86.16%
+  83.83%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.49
+         1.44
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>159</b> relevant lines,
-    <span class="green"><b>137</b> lines covered</span> and
-    <span class="red"><b>22</b> lines missed. </span>
+    <b>167</b> relevant lines,
+    <span class="green"><b>140</b> lines covered</span> and
+    <span class="red"><b>27</b> lines missed. </span>
     (<span class="yellow">
-  86.16%
+  83.83%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3b74ee9539ad57ce86bfc75b62a87e49e5342f6e" class="src_link" title="spec/game_spec.rb">spec/game_spec.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">72.50 %</td>
-            <td class="cell--number">117</td>
-            <td class="cell--number">80</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">1.11</td>
+            <td class="red strong cell--number t-file__coverage">69.32 %</td>
+            <td class="cell--number">130</td>
+            <td class="cell--number">88</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">1.05</td>
             
           </tr>
         
@@ -186,7 +186,7 @@
 
             
 
-            <code class="ruby">  attr_accessor :players</code>
+            <code class="ruby">  attr_accessor :players, :current_bet</code>
           </li>
         </div>
       
@@ -1311,7 +1311,7 @@
     <h3>spec/game_spec.rb</h3>
     <h4>
       <span class="red">
-  72.5%
+  69.32%
 </span>
 
       lines covered
@@ -1320,9 +1320,9 @@
     
 
     <div class="t-line-summary">
-      <b>80</b> relevant lines.
-      <span class="green"><b>58</b> lines covered</span> and
-      <span class="red"><b>22</b> lines missed.</span>
+      <b>88</b> relevant lines.
+      <span class="green"><b>61</b> lines covered</span> and
+      <span class="red"><b>27</b> lines missed.</span>
     </div>
 
     
@@ -2510,24 +2510,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="108">
+          <li class="covered" data-hits="1" data-linenumber="108">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        game.current_bet = 10</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="109">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="109">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">        p1 = Player.new</code>
           </li>
         </div>
       
@@ -2538,7 +2538,7 @@
 
             
 
-            <code class="ruby">        p1.pot = 100</code>
+            <code class="ruby">        p1 = Player.new</code>
           </li>
         </div>
       
@@ -2549,12 +2549,23 @@
 
             
 
+            <code class="ruby">        p1.pot = 100</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="112">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        action = &#39;call&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="112">
+          <li class="never" data-hits="" data-linenumber="113">
             
             
 
@@ -2565,7 +2576,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="113">
+          <li class="covered" data-hits="2" data-linenumber="114">
             <span class="hits">2</span>
             
 
@@ -2576,7 +2587,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="114">
+          <li class="never" data-hits="" data-linenumber="115">
             
             
 
@@ -2587,7 +2598,139 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
+          <li class="never" data-hits="" data-linenumber="116">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="117">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      xit &#39;should change player pot by current bet when bet is 5&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="118">
+            
+            
+
+            
+
+            <code class="ruby">        game = Game.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="119">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="120">
+            
+            
+
+            
+
+            <code class="ruby">        p1 = Player.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="121">
+            
+            
+
+            
+
+            <code class="ruby">        p1.pot = 100</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="122">
+            
+            
+
+            
+
+            <code class="ruby">        action = &#39;call&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="123">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="124">
+            
+            
+
+            
+
+            <code class="ruby">        expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(95)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="125">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="126">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="127">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;should change game pot by current bet&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="128">
             
             
 
@@ -2598,7 +2741,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="116">
+          <li class="never" data-hits="" data-linenumber="129">
             
             
 
@@ -2609,7 +2752,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="117">
+          <li class="never" data-hits="" data-linenumber="130">
             
             
 

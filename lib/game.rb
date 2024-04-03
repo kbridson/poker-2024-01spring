@@ -2,7 +2,7 @@
 # typed: true
 
 class Game
-  attr_accessor :players
+  attr_accessor :players, :current_bet
 
   def do(player, _action)
     player.pot -= 10

@@ -105,6 +105,7 @@ RSpec.describe Game do
     context 'when call' do
       it 'should change player pot by current bet when bet is 10' do
         game = Game.new
+        game.current_bet = 10
 
         p1 = Player.new
         p1.pot = 100
@@ -112,6 +113,18 @@ RSpec.describe Game do
 
         expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(90)
       end
+
+      xit 'should change player pot by current bet when bet is 5' do
+        game = Game.new
+
+        p1 = Player.new
+        p1.pot = 100
+        action = 'call'
+
+        expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(95)
+      end
+
+      it 'should change game pot by current bet'
     end
   end
 end
