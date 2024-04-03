@@ -43,8 +43,7 @@ class Game
     puts 'Current main pot: $0'
     puts 'Current bet: $0'
     print 'Enter your bet (fold, call, or raise): '
-    STDIN.gets
-    players[0].pot -= 10
+    self.do(players[0], STDIN.gets)
     puts 'Main pot is now $10'
     puts "Your pot is now $#{players[0].pot}"
     puts
@@ -53,8 +52,7 @@ class Game
     puts 'Current main pot: $10'
     puts 'Current bet: $10'
     print 'Enter your bet (fold, call, or raise): '
-    STDIN.gets
-    players[1].pot -= 10
+    self.do(players[1], STDIN.gets)
     puts 'Main pot is now $20'
     puts "Your pot is now $#{players[1].pot}"
     puts
@@ -76,8 +74,7 @@ class Game
     puts 'Current main pot: $20'
     puts 'Current bet: $0'
     print 'Enter your bet (fold, call, or raise): '
-    STDIN.gets
-    players[0].pot -= 50
+    self.do(players[0], STDIN.gets)
     puts 'Main pot is now $70'
     puts "Your pot is now $#{players[0].pot}"
     puts
@@ -86,8 +83,7 @@ class Game
     puts 'Current main pot: $70'
     puts 'Current bet: $50'
     print 'Enter your bet (fold, call, or raise): '
-    STDIN.gets
-    players[1].pot -= 50
+    self.do(players[1], STDIN.gets)
     puts 'Main pot is now $120'
     puts "Your pot is now $#{players[1].pot}"
     puts
