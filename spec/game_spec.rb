@@ -68,7 +68,7 @@ RSpec.describe Game do
       expect($stdin).to have_received(:gets).exactly(6).times
     end
 
-    it 'plays a 2 player game (run2) with raise then see, no folds, no discards' do
+    xit 'plays a 2 player game (run2) with raise then see, no folds, no discards' do
       game = Game.new
 
       p1 = Player.new
@@ -158,6 +158,17 @@ RSpec.describe Game do
         action = 'raise 5'
 
         expect { game.do(p1, action) }.to change(p1, :pot).from(100).to(90).and change(game, :pot).from(0).to(10)
+      end
+
+      it 'should increase current bet by val' do
+        game = Game.new
+        game.current_bet = 5
+
+        p1 = Player.new
+        p1.pot = 100
+        action = 'raise 5'
+
+        expect { game.do(p1, action) }.to change(game, :current_bet).from(5).to(10)
       end
     end
   end

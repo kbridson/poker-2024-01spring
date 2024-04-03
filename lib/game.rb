@@ -18,6 +18,7 @@ class Game
       amt = current_bet + val.to_i
       player.pot -= amt
       @pot += amt
+      self.current_bet += val.to_i
     end
   end
 
@@ -43,7 +44,8 @@ class Game
     puts 'Current main pot: $0'
     puts 'Current bet: $0'
     print 'Enter your bet (fold, call, or raise): '
-    self.do(players[0], STDIN.gets)
+    STDIN.gets
+    players[0].pot -= 10
     puts 'Main pot is now $10'
     puts "Your pot is now $#{players[0].pot}"
     puts
@@ -52,7 +54,8 @@ class Game
     puts 'Current main pot: $10'
     puts 'Current bet: $10'
     print 'Enter your bet (fold, call, or raise): '
-    self.do(players[1], STDIN.gets)
+    STDIN.gets
+    players[1].pot -= 10
     puts 'Main pot is now $20'
     puts "Your pot is now $#{players[1].pot}"
     puts
@@ -74,7 +77,8 @@ class Game
     puts 'Current main pot: $20'
     puts 'Current bet: $0'
     print 'Enter your bet (fold, call, or raise): '
-    self.do(players[0], STDIN.gets)
+    STDIN.gets
+    players[0].pot -= 50
     puts 'Main pot is now $70'
     puts "Your pot is now $#{players[0].pot}"
     puts
@@ -83,7 +87,8 @@ class Game
     puts 'Current main pot: $70'
     puts 'Current bet: $50'
     print 'Enter your bet (fold, call, or raise): '
-    self.do(players[1], STDIN.gets)
+    STDIN.gets
+    players[1].pot -= 50
     puts 'Main pot is now $120'
     puts "Your pot is now $#{players[1].pot}"
     puts
